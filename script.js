@@ -9,11 +9,12 @@ let formReadingProgress = document.getElementById("finished-reading");
 
 let myLibrary = [];
 
-function Book(name, author, numPages, haveRead) {
+function Book(name, author, numPages, haveRead, imgPath = "") {
     this.name = name;
     this.author = author;
     this.numPages = numPages;
     this.haveRead = haveRead;
+    this.imgPath = imgPath;
 }
 
 Book.prototype.info = function() {
@@ -26,14 +27,17 @@ Book.prototype.info = function() {
 
 function addBookToLibrary(book) {
     let container = document.querySelector(".book-item-container");
-
     let newBook = document.createElement("div");
     newBook.classList.add("book-item");
+
+    if (book.imgPath == "") {
+        book.imgPath = "./images/default.png"
+    }
 
     newBook.innerHTML = `
         <img class="book-delete" src="./images/x.png" alt="">
         <div class="book-img-container">
-            <img class="book-img" src="./images/agameofthrones.jpg" alt="">
+            <img class="book-img" src=${book.imgPath} alt="">
         </div>
         <h3>${book.name}</h3>
         <p>${book.author}</p>
@@ -51,6 +55,12 @@ function resetForm() {
     
     let formContainer = document.querySelector(".form-container");
     formContainer.style.visibility = "hidden";
+}
+
+function populatePage() {
+    for (var i = 0; i < myLibrary.length; i++) {
+        addBookToLibrary(myLibrary[i]);
+    }
 }
 
 // EVENT LISTENERS
@@ -72,8 +82,19 @@ bookForm.addEventListener('submit', (e) => {
     myLibrary.push(book);
     addBookToLibrary(book);
     resetForm();
+    console.log(myLibrary);
 })
 
 closeForm.addEventListener('click', () => {
     resetForm();
 })
+
+// Populate page with default data
+let book1 = new Book("A Game of Thrones", "George R.R. Martin", 847, "yes", "./images/agameofthrones.jpg");
+let book2 = new Book("A Storm of Swords", "George R.R. Martin", 938, "no", "./images/astormofswords.jpg");
+let book3 = new Book("Naruto Volume 47", "Masashi Kishimoto", 212, "yes", "./images/naruto47.jpeg");
+let book4 = new Book("Attack on Titan Volume 30", "Hajime Isayama", 230, "no", "./images/aot30.jpeg");
+let book5 = new Book("No Longer Human", "Osamu Dazai", 271, "no", "./images/nolongerhuman.jpeg");
+
+myLibrary.push(book1, book2, book3, book4, book5);
+populatePage();

@@ -16,7 +16,7 @@ header {
 }
 
 .header-text {
-  padding: 60px 120px;
+  padding: 60px 205px;
   font-size: 24px;
   display: flex;
   justify-content: space-between;
@@ -37,6 +37,19 @@ header {
 .header-text button:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr.solid {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  width: 77%;
+  margin-bottom: 24px;
 }
 
 .slideshow {
@@ -67,7 +80,7 @@ header {
 }
 
 .book-item-container {
-  padding: 48px 108px;
+  padding: 48px 205px;
   display: flex;
   justify-content: center;
   gap: 60px;
@@ -120,13 +133,12 @@ header {
 
 .footer {
   height: 20%;
-  background: rgb(49, 49, 49);
-  padding: 12px;
-  color: rgb(143, 143, 143);
+  background: rgb(34, 34, 34);
+  padding: 24px;
+  color: rgb(110, 110, 110);
   text-align: center;
   font-size: 12px;
   letter-spacing: 1px;
-  
 }
 
 /* ADD A BOOK MODAL */
