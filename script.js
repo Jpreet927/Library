@@ -1,3 +1,5 @@
+let addBookButton = document.getElementById("add-book-btn");
+
 let myLibrary = [];
 
 function Book(name, author, numPages, haveRead) {
@@ -18,3 +20,10 @@ Book.prototype.info = function() {
 function addBookToLibrary() {
     
 }
+
+// EVENT LISTENERS
+
+addBookButton.addEventListener('click', () => {
+    let formContainer = document.querySelector(".form-container");
+    formContainer.style.visibility = "visible";
+})

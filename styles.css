@@ -136,6 +136,11 @@ header {
   background: rgba(0, 0, 0, 0.329);
 }
 
+.form-container {
+  visibility: hidden;
+  z-index: 20;
+}
+
 .book-modal {
   display: flex;
   flex-direction: column;
