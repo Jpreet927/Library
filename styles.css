@@ -16,7 +16,7 @@ header {
 }
 
 .header-text {
-  padding: 36px 108px;
+  padding: 60px 120px;
   font-size: 24px;
   display: flex;
   justify-content: space-between;
@@ -40,7 +40,7 @@ header {
 }
 
 .slideshow {
-  min-height: 400px;
+  /* min-height: 400px; */
   max-height: 500px;
   width: 100%;
   background: rgb(12, 12, 12);
@@ -58,7 +58,7 @@ header {
 .vignette {
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: auto;
   top: 0;
   left: 0;
   box-shadow: inset 0 0 800px rgb(0, 0, 0);
@@ -119,8 +119,14 @@ header {
 }
 
 .footer {
-  height: 10%;
-  background: grey;
+  height: 20%;
+  background: rgb(49, 49, 49);
+  padding: 12px;
+  color: rgb(143, 143, 143);
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  
 }
 
 /* ADD A BOOK MODAL */
@@ -131,12 +137,9 @@ header {
   align-items: center;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
-  background: rgba(0, 0, 0, 0.329);
-}
-
-.form-container {
+  background: rgba(0, 0, 0, 0.514);
   visibility: hidden;
   z-index: 20;
 }
@@ -153,12 +156,16 @@ header {
   position: relative;
 }
 
-.book-modal img {
+.book-modal .close-form {
   height: 20px;
   width: 20px;
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+.book-modal .close-form:hover{
+  cursor: pointer;
 }
 
 .book-modal h3 {
@@ -173,7 +180,7 @@ header {
 
 .add-book-btn button {
   border: none;
-  background: rgb(108, 78, 240);
+  background: rgb(231, 35, 35);;
   padding: 16px 32px;
   color: white;
   font-weight: 700;
@@ -184,7 +191,7 @@ header {
 
 .add-book-btn button:hover {
   cursor: pointer;
-  background: rgb(82, 54, 204);
+  background: rgb(204, 25, 25);
   transform: scale(1.05);
 }
 

@@ -16,7 +16,7 @@
                 <img src="./images/asoiaf-header-image2.jpg" alt="">
             </div>
             <div class="header-text">
-                <h1>My Novel Library</h1>
+                <h1>Book Library</h1>
                 <button id="add-book-btn">Add A Book!</button>
             </div>
         </header>
@@ -47,24 +47,24 @@
 <!-- Modal Section -->
     <div class="form-container">
         <div class="book-modal">
-            <img src="./images/x.png" alt="">
+            <img class="close-form" src="./images/x.png" alt="">
             
             <h3>Book Info.</h3>
 
-            <form action="">
-                <div class="book-input book-name">
+            <form id="book-form" action="">
+                <div class="book-input">
                     <label for="">The Book's Name</label>
-                    <input type="text" placeholder="The Book's Name" required>
+                    <input id="book-name" type="text" placeholder="The Book's Name" required>
                 </div>
-                <div class="book-input author-name">
+                <div class="book-input">
                     <label for="">The Author's Name</label>
-                    <input type="text" placeholder="The Author's Name" required>
+                    <input id="author-name" type="text" placeholder="The Author's Name" required>
                 </div>
-                <div class="book-input num-pages">
+                <div class="book-input">
                     <label for="">Number of Pages</label>
-                    <input type="text" placeholder="Number of Pages" required>
+                    <input id="num-pages" type="text" placeholder="Number of Pages" required>
                 </div>
-                <div class="book-input finished-reading">
+                <div class="book-input" id="finished-reading">
                     <label for="">Have You Finished Reading?</label>
                     <select name="" id="reading-selection">
                         <option value="no">No</option>
