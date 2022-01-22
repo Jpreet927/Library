@@ -8,35 +8,79 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
-<body>
-    <header>
-        <h1>My Novel Library</h1>
-    </header>
-    
-    
-    <div class="book-form">
-        <form action="">
-            <div class="book-name">
-                <label for="">The Book's Name</label>
-                <input type="text" required>
+<body>    
+    <div class="main-container">
+        <header>
+            <div class="slideshow">
+                <div class="vignette"></div>
+                <img src="./images/asoiaf-header-image2.jpg" alt="">
             </div>
-            <div class="author-name">
-                <label for="">The Author's Name</label>
-                <input type="text" required>
+            <div class="header-text">
+                <h1>My Novel Library</h1>
+                <button>Add A Book!</button>
             </div>
-            <div class="num-pages">
-                <label for="">Number of Pages</label>
-                <input type="text" required>
-            </div>
-                <div class="finished-reading">
-                <label for="">Have You Finished Reading?</label>
-                <select name="" id="">
-                    <option value="no">No</option>
-                    <option value="yes">Yes</option>
-                </select>
-            </div>
-            <button>Add to Library!</button>
-        </form>
+        </header>
     </div>
+    <div class="book-item-container">
+        <div class="book-item">
+            <img class="book-delete" src="./images/x.png" alt="">
+            <div class="book-img-container">
+                <img class="book-img" src="./images/agameofthrones.jpg" alt="">
+            </div>
+            <h3>A Game of Thrones</h3>
+            <p>by George R.R. Martin</p>
+            <p>732 Pages</p>
+        </div>
+        <div class="book-item">
+            <img class="book-delete" src="./images/x.png" alt="">
+            <div class="book-img-container">
+                <img class="book-img" src="./images/aclashofkings.jpg" alt="">
+            </div>
+            <h3>A Game of Thrones</h3>
+            <p>by George R.R. Martin</p>
+            <p>732 Pages</p>
+        </div>
+    </div>
+    
+
+
+<!-- Modal Section -->
+    <!-- <div class="form-container">
+        <div class="book-modal">
+            <img src="./images/x.png" alt="">
+            
+            <h3>Book Info.</h3>
+
+            <form action="">
+                <div class="book-input book-name">
+                    <label for="">The Book's Name</label>
+                    <input type="text" placeholder="The Book's Name" required>
+                </div>
+                <div class="book-input author-name">
+                    <label for="">The Author's Name</label>
+                    <input type="text" placeholder="The Author's Name" required>
+                </div>
+                <div class="book-input num-pages">
+                    <label for="">Number of Pages</label>
+                    <input type="text" placeholder="Number of Pages" required>
+                </div>
+                <div class="book-input finished-reading">
+                    <label for="">Have You Finished Reading?</label>
+                    <select name="" id="reading-selection">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="add-book-btn">
+                    <button class="add-btn">Add to Library!</button>
+                </div>
+            </form>
+        </div>
+    </div> -->
+
+    <footer>
+        <div class="footer">Created by Jaipreet Singh</div>
+    </footer>
+
 </body>
 </html>
