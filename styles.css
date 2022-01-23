@@ -95,11 +95,11 @@ hr.solid {
   gap: 12px;
 }
 
-.book-item h3 {
+.book-item .book-details h3 {
   color: rgb(255, 255, 255);
 }
 
-.book-item p {
+.book-item .book-details p {
   color: rgb(187, 187, 187);
   font-size: 14px;
 }
@@ -129,6 +129,45 @@ hr.solid {
 .book-item:hover .book-delete {
   visibility: visible;
   cursor: pointer;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  border-radius: 100px;
+  /* border: 2px solid rgba(255, 255, 255, 0.212); */
+  background: rgb(202, 40, 40);
+  transition: all 0.2s ease;
+}
+
+.toggle .toggle-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  transform: scale(0.9);
+  transition: all 0.2s ease;
+}
+
+.toggle.active {
+  background: rgb(90, 219, 29);
+}
+
+.toggle.inactive {
+  background: rgb(202, 40, 40);
+}
+
+.toggle.active .toggle-btn {
+  left: 24px;
 }
 
 .footer {
@@ -176,7 +215,7 @@ hr.solid {
   right: 20px;
 }
 
-.book-modal .close-form:hover{
+.book-modal .close-form:hover {
   cursor: pointer;
 }
 
@@ -192,7 +231,7 @@ hr.solid {
 
 .add-book-btn button {
   border: none;
-  background: rgb(231, 35, 35);;
+  background: rgb(231, 35, 35);
   padding: 16px 32px;
   color: white;
   font-weight: 700;
