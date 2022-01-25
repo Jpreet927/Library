@@ -45,7 +45,7 @@ header {
   height: 40px;
   width: 120px;
   padding: 10px;
-  background: rgb(231, 35, 35);
+  background: rgb(60, 145, 243);
   color: white;
   font-weight: 700;
   transition: all 0.2s ease;
@@ -267,7 +267,7 @@ header {
 
 .add-book-btn button {
   border: none;
-  background: rgb(231, 35, 35);
+  background: rgb(60, 145, 243);
   padding: 16px 32px;
   color: white;
   font-weight: 700;
@@ -278,7 +278,7 @@ header {
 
 .add-book-btn button:hover {
   cursor: pointer;
-  background: rgb(204, 25, 25);
+  background: rgb(53, 111, 235);
   transform: scale(1.05);
 }
 
